@@ -4,16 +4,20 @@ Adam Roberts — Design & Engineering portfolio.
 
 I bring the unexpected to brand & digital experiences.
 
-## Live site
+## 🌐 Live site
 
-Open `index.html` in a browser (or enable GitHub Pages on this repo).
+**https://sugata100.github.io/developer-portfolio/**
 
 ## Contents
 
-Full multi-section portfolio: Hero, About, Process, Projects, Services, Catalog (tech orbit), Journal, Testimonials, Stats (D.O.T), Explorations, Contact.
+Full multi-section portfolio: Hero, About, Process, Projects, Services, Catalog (tech orbit), Stats (D.O.T), Contact.
 
 Built with HTML, Tailwind CSS, GSAP.
 
+## Local
+
+Open `index.html` in a browser to preview offline.
+
 ---
 
-Migrated from `adam-roberts-portfolio`.
+[View on GitHub](https://github.com/sugata100/developer-portfolio)
