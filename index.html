@@ -3,85 +3,260 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sugata Patra — Creative Coder & Fullstack Developer</title>
-<meta name="description" content="Sugata Patra — Creative coder & fullstack developer building cinematic digital experiences." />
+<title>Adam Roberts - Design & Engineering</title>
+<meta name="description" content="Adam Roberts — Design & Engineering. I bring the unexpected to brand & digital experiences." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/d08bafd725a4cfc309efb5a88e0b63a5?family=basis33" rel="stylesheet">
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <style>
-  body{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;margin:0;background:#0a0a0a;color:#f5f5f5;overflow-x:hidden}
-  .font-display{font-family:'Instrument Serif',serif}
-  html{scroll-behavior:smooth}
-  #mobile-menu a{opacity:0;transform:translateY(1rem);transition:opacity 500ms cubic-bezier(0.16,1,0.3,1),transform 500ms cubic-bezier(0.16,1,0.3,1)}
-  #mobile-menu.is-open a{opacity:1;transform:translateY(0)}
-  .glass-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .3s,background .3s,transform .3s}
-  .glass-card:hover{border-color:rgba(137,170,204,0.35);background:rgba(255,255,255,0.05)}
-  .accent-gradient{background:linear-gradient(90deg,#89AACC 0%,#4E85BF 100%)}
-  .reveal{opacity:0;transform:translateY(30px)}
-  .orbit-item{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:11px;text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);transition:border-color .3s,background .3s}
-  .orbit-item:hover{border-color:rgba(137,170,204,0.5);background:rgba(137,170,204,0.08)}
-  .orbit-ring{position:absolute;top:50%;left:50%;border:1px solid rgba(255,255,255,0.06);border-radius:50%;transform:translate(-50%,-50%)}
-  @keyframes scrollTesti{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  @keyframes scroll-down{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
-  .animate-scroll-down{animation:scroll-down 1.5s ease-in-out infinite}
-  @keyframes role-fade-in{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
-  .animate-role-fade-in{animation:role-fade-in 0.4s ease-out}
-  ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0a0a0a}::-webkit-scrollbar-thumb{background:#222;border-radius:4px}
-  ::selection{background:#4E85BF;color:#fff}
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  .font-pixel { font-family: 'basis33', monospace; }
+  html { scroll-behavior: smooth; }
+
+  #mobile-menu a {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 500ms cubic-bezier(0.16,1,0.3,1), transform 500ms cubic-bezier(0.16,1,0.3,1);
+  }
+  #mobile-menu.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .glass-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color .3s, background .3s, transform .3s;
+  }
+  .glass-card:hover {
+    border-color: rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .reveal { opacity: 0; transform: translateY(30px); }
+
+  .orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.85);
+    transition: border-color .3s, background .3s;
+  }
+  .orbit-item:hover {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.08);
+  }
+  .orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes scrollTesti {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-down {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+  }
+  .animate-scroll-down { animation: scroll-down 1.5s ease-in-out infinite; }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+
+  ::selection { background: #fff; color: #000; }
 </style>
 </head>
-<body class="bg-[#0a0a0a] text-white">
-<div id="hero" class="relative h-screen w-full overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0d1117] to-[#0a0a0a]"></div>
-  <div class="absolute inset-0 opacity-30" style="background-image:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(78,133,191,0.25),transparent)"></div>
-  <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+<body class="bg-black text-white">
+
+<!-- ========== HERO (Adam original, enhanced) ========== -->
+<div id="hero" class="relative h-screen w-full overflow-hidden bg-black text-white">
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 h-full w-full object-cover lg:scale-[1.2]"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260725_114042_d2ed2a89-f2fa-449b-9609-da456344257b.mp4"
+  ></video>
+  <div class="absolute inset-0 bg-black/30"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
+
   <div class="relative z-10 flex h-full flex-col px-5 sm:px-6 md:px-10 lg:px-14">
+
     <nav class="flex items-center justify-between py-6">
-      <a href="#hero" class="group w-10 h-10 rounded-full p-[1.5px] accent-gradient" aria-label="Home">
-        <div class="w-full h-full rounded-full bg-[#0a0a0a] flex items-center justify-center"><span class="font-display italic text-sm">SP</span></div>
+      <a href="#hero" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256" fill="none">
+          <path d="M 160 88 L 194 34 L 216 0 L 256 0 L 256 40 L 221.5 93.5 L 200 128 L 256 128 L 256 256 L 96 256 L 96 168 L 64.246 220 L 40 256 L 0 256 L 0 216 L 34 162 L 56 128 L 0 128 L 0 0 L 160 0 Z" fill="white" />
+        </svg>
       </a>
+
       <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
         <a href="#about" class="hover:opacity-70 transition-opacity">ABOUT</a>
         <a href="#process" class="hover:opacity-70 transition-opacity">PROCESS</a>
-        <a href="#projects" class="hover:opacity-70 transition-opacity">WORK</a>
-        <a href="#services" class="hover:opacity-70 transition-opacity">SERVICES</a>
-        <a href="#stack" class="hover:opacity-70 transition-opacity">STACK</a>
-        <a href="#contact" class="hover:opacity-70 transition-opacity">CONTACT</a>
+        <a href="#projects" class="hover:opacity-70 transition-opacity">PROJECTS</a>
+        <a href="#catalog" class="hover:opacity-70 transition-opacity">CATALOG</a>
+        <a href="#stats" class="hover:opacity-70 transition-opacity">D.O.T</a>
+        <a href="#contact" class="hover:opacity-70 transition-opacity">TALK</a>
       </div>
+
       <button id="menu-open-btn" class="md:hidden p-2 hover:opacity-70 transition-opacity" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
       </button>
     </nav>
-    <div class="flex-1 flex flex-col items-center justify-center text-center px-4">
-      <div class="text-xs text-white/50 uppercase tracking-[0.3em] mb-6">COLLECTION '26</div>
-      <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight mb-6">Sugata Patra</h1>
-      <div class="text-sm md:text-base text-white/60 mb-4">A <span id="role-text" class="font-display italic text-white animate-role-fade-in inline-block">Creative Coder</span> based in West Bengal.</div>
-      <p class="text-sm md:text-base text-white/50 max-w-md mb-10">Designing seamless digital interactions by focusing on the unique nuances which bring systems to life.</p>
-      <div class="inline-flex gap-4 flex-wrap justify-center">
-        <a href="#projects" class="rounded-full text-sm px-7 py-3.5 bg-white text-black font-medium hover:scale-105 transition-transform">See Works</a>
-        <a href="#contact" class="rounded-full text-sm px-7 py-3.5 border border-white/20 hover:border-white/40 hover:bg-white/5 transition-all">Reach out</a>
+
+    <div class="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <div>
+        <h2 class="text-lg md:text-xl tracking-wide leading-tight">
+          <span class="block font-normal">ADAM</span>
+          <span class="block font-pixel text-2xl md:text-3xl">ROBERTS</span>
+        </h2>
+        <div class="mt-3 text-[10px] text-white/50">*</div>
+        <p class="font-pixel mt-1 text-xs text-white/60 leading-relaxed">
+          Grilled Pixels is my<br />
+          personal brand - I came up<br />
+          with it in 2004 based on<br />
+          "cooking up ideas"
+        </p>
+      </div>
+
+      <div class="text-right lg:text-left">
+        <h2 class="text-lg md:text-xl tracking-wide leading-tight">
+          <span class="block font-normal">DESIGN &</span>
+          <span class="block font-pixel text-2xl md:text-3xl">ENGINEERING</span>
+        </h2>
+      </div>
+
+      <div>
+        <div class="font-pixel text-base tracking-widest text-white/50 uppercase mb-3">What I Do</div>
+        <p class="text-sm text-white/90 leading-relaxed max-w-[220px]">
+          I create the top 1% of experiences for brands and digital products
+        </p>
+      </div>
+
+      <div class="text-right lg:text-left">
+        <div class="font-pixel text-base tracking-widest text-white/50 uppercase mb-3">Services</div>
+        <ul class="text-sm text-white/90 leading-relaxed space-y-0.5">
+          <li>Branding</li>
+          <li>Creative Direction & Strategy</li>
+          <li>UX/UI Design</li>
+          <li>Web Development (React/Nextjs)</li>
+          <li>3D, WebGL / Photography</li>
+          <li>Video & Animation</li>
+        </ul>
       </div>
     </div>
-    <div class="pb-8 flex flex-col items-center gap-2">
-      <span class="text-xs text-white/40 uppercase tracking-[0.2em]">Scroll</span>
-      <div class="relative w-px h-10 bg-white/15 overflow-hidden"><div class="absolute top-0 left-0 w-full h-3 bg-white/80 animate-scroll-down"></div></div>
+
+    <div class="flex-1"></div>
+
+    <div class="pb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 items-end">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] tracking-wide uppercase font-normal" style="line-height: 0.72;">
+          I BRING THE<br />
+          <span class="font-pixel font-normal text-[1.25em] inline-block leading-none align-baseline">UNEXPECTED</span> TO<br />
+          BRAND & DIGITAL<br />
+          <span class="font-pixel font-normal text-[1.25em] inline-block leading-none align-baseline">EXPERIENCES</span>
+        </h1>
+
+        <div class="flex flex-col gap-4 sm:gap-6 justify-end">
+          <button id="play-showreel" class="self-start flex items-center gap-3 border border-white/30 px-6 py-3 backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
+            <span class="text-sm tracking-wider">PLAY SHOWREEL</span>
+          </button>
+
+          <div class="self-start lg:self-end flex flex-wrap items-stretch gap-2 sm:gap-3 text-sm text-white/80">
+            <div class="bg-[#0B0B0B] px-3 sm:px-4 py-2 flex items-center gap-2">
+              <span class="font-bold text-sm sm:text-base tracking-tight">FWA</span>
+              <span class="text-white/50 text-xs">x1</span>
+            </div>
+            <div class="bg-[#0B0B0B] px-3 sm:px-4 py-2 flex items-center gap-2">
+              <span class="font-bold text-lg sm:text-xl">W.</span>
+              <span class="text-white/50 text-xs">x7</span>
+            </div>
+            <div class="bg-[#0B0B0B] px-3 sm:px-4 py-2 flex items-center gap-2">
+              <span class="font-bold text-[10px] sm:text-xs tracking-tight">CSSDesignAwards</span>
+              <span class="text-white/50 text-xs">x22</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 pt-4">
+        <div class="text-xs text-white/60">
+          Open to freelance, contract or full-time. <a href="#contact" class="text-red-500 hover:text-red-400 transition-colors">Schedule a call</a>
+        </div>
+        <div class="text-xs text-white/60 sm:text-right">
+          5 full cases &bull; 82 archive fragments &bull; 22 catalog items
+        </div>
+      </div>
     </div>
   </div>
-  <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col opacity-0 pointer-events-none transition-all duration-500">
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col opacity-0 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
     <div class="flex items-center justify-between px-6 py-6">
-      <div class="w-10 h-10 rounded-full p-[1.5px] accent-gradient"><div class="w-full h-full rounded-full bg-[#0a0a0a] flex items-center justify-center"><span class="font-display italic text-sm">SP</span></div></div>
-      <button id="menu-close-btn" class="p-2 hover:opacity-70" aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256" fill="none">
+        <path d="M 160 88 L 194 34 L 216 0 L 256 0 L 256 40 L 221.5 93.5 L 200 128 L 256 128 L 256 256 L 96 256 L 96 168 L 64.246 220 L 40 256 L 0 256 L 0 216 L 34 162 L 56 128 L 0 128 L 0 0 L 160 0 Z" fill="white" />
+      </svg>
+      <button id="menu-close-btn" class="p-2 hover:opacity-70 transition-opacity" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
     </div>
     <nav class="flex flex-col items-center justify-center flex-1 gap-8">
-      <a href="#about" class="text-2xl tracking-widest">ABOUT</a>
-      <a href="#process" class="text-2xl tracking-widest">PROCESS</a>
-      <a href="#projects" class="text-2xl tracking-widest">WORK</a>
-      <a href="#services" class="text-2xl tracking-widest">SERVICES</a>
-      <a href="#stack" class="text-2xl tracking-widest">STACK</a>
-      <a href="#contact" class="text-2xl tracking-widest">CONTACT</a>
+      <a href="#about" class="text-2xl tracking-widest" style="transition-delay:100ms">ABOUT</a>
+      <a href="#process" class="text-2xl tracking-widest" style="transition-delay:160ms">PROCESS</a>
+      <a href="#projects" class="text-2xl tracking-widest" style="transition-delay:220ms">PROJECTS</a>
+      <a href="#catalog" class="text-2xl tracking-widest" style="transition-delay:280ms">CATALOG</a>
+      <a href="#stats" class="text-2xl tracking-widest" style="transition-delay:340ms">D.O.T</a>
+      <a href="#contact" class="text-2xl tracking-widest" style="transition-delay:400ms">TALK</a>
     </nav>
   </div>
 </div>
+
+<!-- PLACEHOLDER_CONTINUE -->
+</body>
+</html>
